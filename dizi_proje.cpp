@@ -39,6 +39,21 @@ int main() {
 
     
 
-  
-}
+    // Standart sapma hesaplama
+    double ortalama = static_cast<double>(toplam) / n;
+    double toplamKareFark = 0;
+    for (int i = 0; i < n; i++) {
+        toplamKareFark += pow(dizi[i] - ortalama, 2);
+    }
+    double standartSapma = sqrt(toplamKareFark / n);
 
+    // Sonuçları ekrana yazdırma
+    cout << "Toplam: " << toplam << endl;
+    cout << "En Buyuk: " << enBuyuk << endl;
+    cout << "En Kucuk: " << enKucuk << endl;
+    cout << "Medyan: " << medyan << endl;
+  
+    cout << "Standart Sapma: " << standartSapma << endl;
+
+    return 0;
+}
