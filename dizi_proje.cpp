@@ -24,6 +24,21 @@ int main() {
         toplam += dizi[i];
     }
 
+    // En büyük ve en küçük bulma
+    int enBuyuk = *max_element(dizi.begin(), dizi.end());
+    int enKucuk = *min_element(dizi.begin(), dizi.end());
+
+    // Medyan hesaplama
+    sort(dizi.begin(), dizi.end());
+    int medyan;
+    if (n % 2 == 0) {
+        medyan = (dizi[n / 2 - 1] + dizi[n / 2]) / 2;
+    } else {
+        medyan = dizi[n / 2];
+    }
+
+    
+
   
 }
 
